@@ -7,7 +7,7 @@ Download Expo on from the [app store](https://itunes.apple.com/us/app/expo-clien
 #### Updates
 Updates will work OTA (over-the-air) - you will not need to do anything to update the app.
 ### Android
-[Download from the Play store]
+[Download from the Play store]()
 #### Updates
 Updates will be available through the Play store
 
