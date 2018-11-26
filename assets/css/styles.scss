@@ -1,6 +1,17 @@
 ---
 ---
-$header-heading-color: #fff !default;
-$header-bg-color: #6ECCDF !default;
-$header-bg-color-secondary: #086C76 !default;
+.page-header {
+  color: #F87883;
+  text-align: center;
+  background-color: #6ECCDF;
+  background-image: linear-gradient(120deg, #6ECCDF, #086C76); }
+  @media screen and (min-width: 64em) {
+    .page-header {
+      padding: 5rem 6rem; } }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    .page-header {
+      padding: 3rem 4rem; } }
+  @media screen and (max-width: 42em) {
+    .page-header {
+      padding: 2rem 1rem; } }
 @import "{{ site.theme }}";
