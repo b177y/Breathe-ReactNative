@@ -1,6 +1,6 @@
 ---
 ---
-page-header {
-background: linear-gradient( to bottom, #6ECCDF, #086C76);
-}
+$header-heading-color: #fff !default;
+$header-bg-color: #6ECCDF !default;
+$header-bg-color-secondary: #086C76 !default;
 @import "{{ site.theme }}";
