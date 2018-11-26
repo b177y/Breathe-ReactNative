@@ -1,0 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+page-header {
+background: linear-gradient( to bottom, #6ECCDF, #086C76);
+}
