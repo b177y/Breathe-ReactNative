@@ -13,7 +13,7 @@
     .page-header {
       padding: 2rem 1rem; } }
 
-.main-content {
+.custom-main-content {
   word-wrap: break-word; }
   .main-content :first-child {
     margin-top: 0; }
