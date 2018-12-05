@@ -13,51 +13,7 @@ const style=StyleSheet.create({
       },
 });
 
-class HomeScreen extends React.Component {
-  constructor(props)
-    {super(props);
-      this.soundObject = new Expo.Audio.Sound();
-    }
-
-  // stopSound = async () => {
-  //   await this.soundObject.stopAsync();
-  // }
-  // playSound = async () => {
-  //   try{
-  //     await this.soundObject.playAsync();
-  //   }catch(error){
-  //     this.createSound()
-  //     await this.soundObject.playAsync();
-  //   }
-  //   }
-
-  // componentWillMount(){
-  //   this.createSound();
-  // }
-
-  // componentWillUnmount(){
-  //   this.stopSound();
-  // }
-
-  
-  // createSound = async() => {
-  //   try {
-  //     await this.soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
-  //     await this.soundObject.setVolumeAsync(0.3)
-  //     await this.soundObject.setIsLoopingAsync(true)
-  //   } catch (error) {
-  //     console.log("sound couldn't load")
-  //   }
-  // }
-
-  // componentDidMount(){
-  //   if (this.props.sound==true){
-  //     this.playSound();
-  //   } else {
-  //     this.stopSound();
-  //   }
-  // }
-  
+class HomeScreen extends React.Component { 
     render() {
         return(
             <LinearGradient colors={['#6ECCDF', '#086C76']} style={{flex: 1 }}>

@@ -38,8 +38,8 @@ class BreatheCircle extends React.Component {
   
   componentWillReceiveProps(nextProps){
     console.log(nextProps)
-    this.breathAnimation.stop()
-    this.breathAnimation.reset()
+    // this.breathAnimation.stop()
+    // this.breathAnimation.reset()
     console.log('restarting animation with in: ', nextProps.in, ' hold: ', nextProps.hold, ' out: ', nextProps.out)
     newAnimation = 
       Animated.loop(
@@ -53,6 +53,8 @@ class BreatheCircle extends React.Component {
         Animated.timing(this.state.circleAnimation, {toValue: 0.6, duration:nextProps.out*1000}),
         Animated.timing(this.state.exhaleAnimation, {toValue: 0, duration:10}),
   ]))
+    this.breathAnimation.stop()
+    this.breathAnimation.reset()
     newAnimation.start()
   }
 
