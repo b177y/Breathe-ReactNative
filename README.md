@@ -19,4 +19,4 @@ Feedback is greatly appreciated and is needed for me to complete my project. I h
 When you change timings in settings the text will overlay the previous text for one cycle of the animation - so just wait for it to complete a cycle and it will function properly. 
 
 ## Troubleshooting
-If you have any problems or questions please email me: billy@thebromells.com
+If you have any problems or questions please email me: [billy@thebromells.com](billy@thebromells.com)
