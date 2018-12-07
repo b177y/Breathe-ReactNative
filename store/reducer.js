@@ -5,8 +5,13 @@ const settings={
     sound: true,
     contacts: [
             {
-                name: "Helpline",
-                number: "ADD NUMBER BEFORE PUBLISHING", //CHANGE BEFORE FINISHING APP - TEST VALUE ONLY
+                name: "'No Panic' Helpline",
+                number: "0844 967 4848",
+                deletable: false
+            },
+            {
+                name: 'Pre-recorded message helpline',
+                number: "01952 680835",
                 deletable: false
             }
         ]
