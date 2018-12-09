@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Breathe",
-    "description": "This app is made to help those who suffer from panic attacks, still in development.",
+    "description": "This app is made to help those who suffer from panic attacks.",
     "slug": "breathe",
     "privacy": "public",
     "sdkVersion": "30.0.0",
