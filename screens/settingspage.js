@@ -14,11 +14,11 @@ class settingsPage extends React.Component {
     number: '',
     errorMessage: 0
   };
-  componentWillMount(){
-    //this.props.callDispatch('RESET', 'nothing');
-  }
+  // componentWillMount(){
+  //   this.props.callDispatch('RESET', 'nothing');
+  // }
   showDialog = () => {
-    if (this.props.contacts.length<=3){
+    if (this.props.contacts.length<=4){
     this.setState({ dialogVisible: true });
     }
   };
@@ -73,12 +73,12 @@ class settingsPage extends React.Component {
               </View> */}
               <View style={{alignContent: 'center', paddingRight: 10, paddingLeft: 10,  justifyContent: 'center', flexDirection: 'row'}}>
                 <Text style={{color: 'white', flex: 1, alignContent: 'center', justifyContent: 'center', fontSize: 30, fontWeight: 'bold'}}>Contacts</Text>
-                <Ionicons size={40} color={(this.props.contacts.length>3) ? 'grey' : '#FF5867'} name='ios-add-circle-outline' onPress={() => this.showDialog()}></Ionicons>
+                <Ionicons size={40} color={(this.props.contacts.length>4) ? 'grey' : '#FF5867'} name='ios-add-circle-outline' onPress={() => this.showDialog()}></Ionicons>
               </View>
-              <Text style={{color: '#d8dfd6', flex: 1, padding: 10, fontSize: 20, fontWeight: 'bold', opacity: (this.props.contacts.length>3) ? 1 : 0}}>Maximum 3 contacts can be added!</Text>
+              <Text style={{color: '#d8dfd6', flex: 1, padding: 10, fontSize: 20, fontWeight: 'bold', opacity: (this.props.contacts.length>4) ? 1 : 0}}>Maximum 3 contacts can be added!</Text>
               <View style={{alignContent: 'center',  padding: 15, paddingRight: 10, paddingLeft: 10,  justifyContent: 'center'}}>
                 <View style={{alignSelf: 'stretch'}}>{this.props.contacts.map((i, index) => {return <ContactSettings name={i.name} number={i.number} deletable={i.deletable} key={index}/>})}</View>
-              </View>            
+              </View>          
               </ScrollView>
           </LinearGradient>
         )

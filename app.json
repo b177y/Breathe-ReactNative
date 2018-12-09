@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "PApp",
+    "name": "Breathe",
     "description": "This app is made to help those who suffer from panic attacks, still in development.",
-    "slug": "PApp",
+    "slug": "breathe",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": [
@@ -26,6 +26,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "githubUrl": "https://github.com/billyb1234/PApp"
+    "githubUrl": "https://github.com/billyb1234/Breathe"
   }
 }

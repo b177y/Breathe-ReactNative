@@ -51,9 +51,8 @@ const reducer = (state=settings, action) => {
             console.log('contacts: ', newState.contacts);
             break;
         case 'NEWCONTACT':
-            newState.contacts=state.contacts
-            newState.contacts.push({name: action.value.name, number: action.value.number, deletable: true})
-            console.log(newState.contacts)
+            newState.contacts = state.contacts.concat({name: action.value.name, number: action.value.number, deletable: true})
+            console.log('created new contact - new store.contacts: ', newState.contacts)
             break;
         case 'RESET':
             console.log('resetting contacts')

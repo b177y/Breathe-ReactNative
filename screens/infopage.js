@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 class infoPage extends React.Component {
   state={
   advice: ['Panic attacks typically last for between 5 and 20 minutes', 'Panic attacks are not dangerous - they do not cause physical harm', "Don't fight it, stay where you are", "Breathe slowly and deeply - in through the nose, out through the mouth", 'Remind yourself it will pass', "Remember it isn't life threatening"],
-    moreInfo: ["A panic attack is a feeling of sudden and intense anxiety. Panic attacks can also have physical symptoms, including shaking, feeling disorientated, nausea, rapid, irregular heartbeats, dry mouth, breathlessness, sweating and dizziness.", ""],
+    moreInfo: ["A panic attack is a feeling of sudden and intense anxiety. Panic attacks can also have physical symptoms, including shaking, feeling disorientated, nausea, rapid, irregular heartbeats, dry mouth, breathlessness, sweating and dizziness.", "If you have been experiencing these symptoms you should see your GP. They will ask you to describe your symptoms, how often they occur and how long you have had them.", "The main treatments for panic disorder are psychological therapies and medication - depending on your symptoms you may be prescribed with one of these, or a combination."],
   }
   componentWillReceiveProps(nextProps){
     console.log('infoPage receiving props:', nextProps.contacts)
@@ -20,8 +20,7 @@ class infoPage extends React.Component {
           <LinearGradient colors={['#6ECCDF', '#086C76']} style={{ alignItems: 'center', flex: 2 }}>
             <View style={{paddingTop: 30, padding: 10}}>
               <Ionicons size={35} color='white' name='ios-return-left'onPress={() => this.props.navigation.navigate('Home')}></Ionicons>
-              <Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>Give this to someone you trust to help calm you down</Text>
-              <Text style={{color: 'red', fontSize: 20, fontWeight: 'bold'}}>This person is having a panic attack!</Text>
+              <Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>Information and Helpful Numbers</Text>
             </View>
             <ScrollView style={{paddingTop: 10}}>
             <View style={{backgroundColor: '#72D0E3', flexDirection: 'row', paddingTop:10, alignSelf: 'stretch'}}>

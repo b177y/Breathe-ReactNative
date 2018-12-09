@@ -39,6 +39,7 @@ class HomeScreen extends React.Component {
       hold: state.hold,
       out: state.out,
       sound: state.sound,
+      contacts: state.contacts,
     };
   };
 

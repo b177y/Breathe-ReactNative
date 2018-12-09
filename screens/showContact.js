@@ -21,7 +21,7 @@ class ShowContact extends React.Component{
     render(){
         return(
             <TouchableOpacity onPress={this.phoneCall} style={{backgroundColor: 'white', borderRadius: 5, opacity: 0.8, flexDirection: 'row', padding: 10, margin: 10, alignContent: 'center'}}>
-                <Text style={{flex: 3}}>{this.props.name}</Text>
+                <Text style={{flex: 3, paddingRight: 10}}>{this.props.name}</Text>
                 <Text style={{flex: 3}}>{this.props.number}</Text>
             </TouchableOpacity>
         )
