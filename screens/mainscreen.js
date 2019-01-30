@@ -14,6 +14,70 @@ const style=StyleSheet.create({
 });
 
 class HomeScreen extends React.Component { 
+  constructor(props)
+    {super(props);
+      this.soundObject = new Expo.Audio.Sound();
+    }
+    stopSound = async () => {	
+      try {
+        await this.soundObject.stopAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+      }catch (error) {
+        try{
+          await this.soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
+          await this.soundObject.stopAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+        } catch(error){
+        console.log('couldnt pause sound', error)
+        }
+      }
+  }	
+  playSound = async () => {	
+    try{	
+      await this.soundObject.playAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+    } catch (error) {
+      try{
+      await this.soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
+      await this.soundObject.playAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+      } catch (error) {
+      console.log('couldnt play sound', error)
+        }
+      }
+    }
+
+  createSound = async()=> {
+    const soundObject = new Expo.Audio.Sound();
+    try {
+      await soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
+      await soundObject.setVolumeAsync(0.3)
+      await soundObject.setIsLoopingAsync(true)
+    } catch (error) {	
+        console.log("sound couldn't load", error)	
+        }
+    if (this.props.sound==true){	
+      this.playSound();	
+    } else {	
+      this.stopSound();	
+    }
+  }
+
+    componentDidMount(){
+    Expo.Audio.setAudioModeAsync({
+      allowsRecordingIOS: false,
+      interruptionModeIOS: Expo.Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+      playsInSilentModeIOS: true,
+      shouldDuckAndroid: true,
+      interruptionModeAndroid: Expo.Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+      playThroughEarpieceAndroid: false,
+    });
+    this.createSound()
+}
+
+  componentWillReceiveProps(nextProps){
+    if (nextProps.sound==true){	
+      this.playSound();	
+    } else {	
+      this.stopSound();	
+    }
+  }
     render() {
         return(
             <LinearGradient colors={['#6ECCDF', '#086C76']} style={{flex: 1 }}>

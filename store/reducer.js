@@ -2,7 +2,7 @@ const settings={
     in: 4,
     hold: 2,
     out: 5,
-    sound: true,
+    sound: false,
     contacts: [
             {
                 name: "'No Panic' Helpline",

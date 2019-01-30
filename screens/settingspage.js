@@ -67,10 +67,10 @@ class settingsPage extends React.Component {
               <SliderComponent sliderText="In" min={1} max={7} val={this.props.in}/>
               <SliderComponent sliderText="Hold" min={0} max={5} val={this.props.hold}/>
               <SliderComponent sliderText="Out" min={2} max={9} val={this.props.out}/>
-              {/* <View style={{alignContent: 'center', flexDirection: 'row', paddingRight: 10, paddingLeft: 10, marginBottom: 30, marginTop: 30, justifyContent: 'center'}}>
+              <View style={{alignContent: 'center', flexDirection: 'row', paddingRight: 10, paddingLeft: 10, marginBottom: 30, marginTop: 30, justifyContent: 'center'}}>
                 <Text style={{color: 'white', flex: 1, alignContent: 'center', justifyContent: 'center', fontSize: 30, fontWeight: 'bold'}}>Sound</Text>
                 <Switch value={this.props.sound} onValueChange={val => this.props.callDispatch('SOUND', val)} trackColor={'#F87883'}></Switch>
-              </View> */}
+              </View>
               <View style={{alignContent: 'center', paddingRight: 10, paddingLeft: 10,  justifyContent: 'center', flexDirection: 'row'}}>
                 <Text style={{color: 'white', flex: 1, alignContent: 'center', justifyContent: 'center', fontSize: 30, fontWeight: 'bold'}}>Contacts</Text>
                 <Ionicons size={40} color={(this.props.contacts.length>4) ? 'grey' : '#FF5867'} name='ios-add-circle-outline' onPress={() => this.showDialog()}></Ionicons>
