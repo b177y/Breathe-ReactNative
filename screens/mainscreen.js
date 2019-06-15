@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Animated, View, Text, StyleSheet} from 'react-native';
-import { LinearGradient } from 'expo'; 
 import Feather from '@expo/vector-icons/Feather';
 import BreatheCircle from './circle';
 import { connect } from "react-redux";
+import { Audio } from 'expo-av';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const style=StyleSheet.create({
   text: {justifyContent: 'center',
@@ -16,15 +17,15 @@ const style=StyleSheet.create({
 class HomeScreen extends React.Component { 
   constructor(props)
     {super(props);
-      this.soundObject = new Expo.Audio.Sound();
+      this.soundObject = new Audio.Sound();
     }
     stopSound = async () => {	
       try {
-        await this.soundObject.stopAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+        await this.soundObject.stopAsync(require('../assets/sounds/PAPPSOUND.mp3'));	
       }catch (error) {
         try{
-          await this.soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
-          await this.soundObject.stopAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+          await this.soundObject.loadAsync(require('../assets/sounds/PAPPSOUND.mp3'));
+          await this.soundObject.stopAsync(require('../assets/sounds/PAPPSOUND.mp3'));	
         } catch(error){
         console.log('couldnt pause sound', error)
         }
@@ -32,11 +33,11 @@ class HomeScreen extends React.Component {
   }	
   playSound = async () => {	
     try{	
-      await this.soundObject.playAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+      await this.soundObject.playAsync(require('../assets/sounds/PAPPSOUND.mp3'));	
     } catch (error) {
       try{
-      await this.soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
-      await this.soundObject.playAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));	
+      await this.soundObject.loadAsync(require('../assets/sounds/PAPPSOUND.mp3'));
+      await this.soundObject.playAsync(require('../assets/sounds/PAPPSOUND.mp3'));	
       } catch (error) {
       console.log('couldnt play sound', error)
         }
@@ -44,9 +45,9 @@ class HomeScreen extends React.Component {
     }
 
   createSound = async()=> {
-    const soundObject = new Expo.Audio.Sound();
+    const soundObject = new Audio.Sound();
     try {
-      await soundObject.loadAsync(require('/Volumes/Storage/OneDrive - Saffron Walden County High School/Computer Science/PApp/assets/sounds/PAPPSOUND.mp3'));
+      await soundObject.loadAsync(require('../assets/sounds/PAPPSOUND.mp3'));
       await soundObject.setVolumeAsync(0.3)
       await soundObject.setIsLoopingAsync(true)
     } catch (error) {	
@@ -60,12 +61,12 @@ class HomeScreen extends React.Component {
   }
 
     componentDidMount(){
-    Expo.Audio.setAudioModeAsync({
+    Audio.setAudioModeAsync({
       allowsRecordingIOS: false,
-      interruptionModeIOS: Expo.Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+      interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
       playsInSilentModeIOS: true,
       shouldDuckAndroid: true,
-      interruptionModeAndroid: Expo.Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+      interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
       playThroughEarpieceAndroid: false,
     });
     this.createSound()

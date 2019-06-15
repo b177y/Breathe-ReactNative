@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Animated, View, Text, StyleSheet} from 'react-native';
-import { LinearGradient } from 'expo'; 
+import { LinearGradient } from 'expo-linear-gradient'; 
 import { connect } from "react-redux";
 
 class BreatheCircle extends React.Component {
@@ -66,10 +66,10 @@ class BreatheCircle extends React.Component {
            <Animated.View style={{
             width: 350,
             height: 350,
-            borderRadius: 200,
+            borderRadius: 175,
             transform: [ {scale: circleAnimation} ]
           }}>
-            <LinearGradient colors={['rgb(255, 206, 224)', 'rgb(248, 120, 131)']} style={{ alignItems: 'center', justifyContent: 'center', flex: 1, borderRadius: 200}}>
+            <LinearGradient colors={['rgb(255, 206, 224)', 'rgb(248, 120, 131)']} style={{ alignItems: 'center', justifyContent: 'center', flex: 1, borderRadius: 175}}>
               <Animated.Text style={{
                 position: 'absolute',
                 justifyContent: 'center',

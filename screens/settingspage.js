@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Switch, Text, View, ScrollView} from 'react-native';
-import { LinearGradient } from 'expo'; 
+import { LinearGradient } from 'expo-linear-gradient'; 
 import { Ionicons } from '@expo/vector-icons';
 import SliderComponent from "./slider";
 import {connect} from 'react-redux';

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
-import { LinearGradient } from 'expo'; 
+import { LinearGradient } from 'expo-linear-gradient'; 
 import { Ionicons } from '@expo/vector-icons';
 import ShowContact from "./showContact";
 import {connect} from 'react-redux';

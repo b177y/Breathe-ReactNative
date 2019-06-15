@@ -9,9 +9,11 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^30.0.1",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "expo": "^33.0.0",
+    "expo-av": "~5.0.2",
+    "expo-linear-gradient": "~5.0.1",
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-dialog": "^5.4.0",
     "react-native-phone-call": "^1.0.9",
     "react-native-slider": "^0.11.0",
@@ -22,5 +24,8 @@
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "schedule": "^0.4.0"
   }
 }
