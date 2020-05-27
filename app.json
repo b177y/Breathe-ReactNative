@@ -4,7 +4,6 @@
     "description": "This app is made to help those who suffer from panic attacks.",
     "slug": "breathe",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
     "platforms": [
       "ios",
       "android"
